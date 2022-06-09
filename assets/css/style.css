@@ -1,0 +1,147 @@
+
+.header-area {
+    background-color: #333;
+    padding-bottom: 5px;
+  }
+  .logo a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    display: block;
+  }
+  .menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    padding: 0;
+    margin: 0;
+  }
+  .menu ul li {
+    position: relative;
+  }
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    padding: 10px 20px;
+  }
+  .menu ul li ul {
+    position: absolute;
+    background-color: #333;
+    flex-direction: column;
+    width: 210px;
+    top: 50px;
+    left: 20px;
+    padding-bottom: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    z-index: 5;
+  }
+  .menu ul li ul li a {
+    margin-left: 25px;
+  }
+  .menu ul li ul li a {
+    padding: 5px 0px;
+  }
+  .menu ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  
+.breadcumb-area {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.breadcumb-area:before {
+  content: "";
+  position: absolute;
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: .7;
+  z-index: -1;
+}
+.breadcumb h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 50px;
+}
+.footer-area {
+  text-align: center;
+  background-color: #333;
+  padding: 15px 0;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+
+.single-post {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-bottom: 50px;
+}
+.meta {
+  margin: 10px 0;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.meta a {
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+}
+.single-post h4 a {
+  color: #333;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 700;
+}
+.single-post img{
+  width: 100%;
+}
+.single-sidebar h4 {
+  background-color: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px;
+}
+.single-sidebar {
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  color: #333;
+  text-decoration: navajowhite;
+  font-weight: 600;
+}
+
+.single-sidebar form {
+  position: relative;
+}
+.single-sidebar input[type="submit"] {
+  position: absolute;
+  right: 0;
+  width: 90px;
+  top: 0;
+  background-color: #ddd;
+  font-weight: bold;
+}

@@ -41,12 +41,13 @@
                             $email = $_POST['email'];
                             $password = md5($_POST['password']);
 
-                            $sql = "SELECT username, email, password, role FROM users WHERE email = '$email' AND password = '$password'";
+                            $sql = "SELECT id, username, email, password, role FROM users WHERE email = '$email' AND password = '$password'";
                             $result = mysqli_query($con, $sql);
 
                             $count = mysqli_num_rows($result);
                             if($count > 0) {
                                 while($row = mysqli_fetch_assoc($result)) {
+                                    $_SESSION['id'] = $row['id'];
                                     $_SESSION['username'] = $row['username'];
                                     $_SESSION['email'] = $row['email'];
                                     $_SESSION['password'] = $row['password'];

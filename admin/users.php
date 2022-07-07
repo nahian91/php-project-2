@@ -21,15 +21,18 @@ if($_SESSION['role'] == 1 ) {
                 unset($_SESSION['user-delete']);
             }
         ?>
-        <table class="table table-border">
-            <tr>
-                <th>SL No.</th>
-                <th>Full Name</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Action</th>
-            </tr>
+        <table class="table table-border" id="usertable">
+            <thead>
+                <tr>
+                    <th>SL No.</th>
+                    <th>Full Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
             <?php
                 $users = "SELECT * FROM users";
                 $result = mysqli_query($con, $users);
@@ -53,7 +56,7 @@ if($_SESSION['role'] == 1 ) {
             <?php
                 }
             ?>
-            
+            </tbody>
         </table>
     </div>
 <?php include 'inc/footer.php'; ?>

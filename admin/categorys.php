@@ -22,14 +22,16 @@ include 'inc/header.php';
             }
         ?>
         <a href="add-category.php" class="btn btn-primary mb-3">Add New Category</a>
-        <table class="table table-border">
-            <tr>
-                <th>SL No.</th>
-                <th>Title</th>
-                <th>Post Count</th>
-                <th>Action</th>
-            </tr>
-
+        <table class="table table-border" id="cattable">
+            <thead>
+                <tr>
+                    <th>SL No.</th>
+                    <th>Title</th>
+                    <th>Post Count</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
             <?php
                 $cat_sql = "SELECT * FROM category";
                 $cat_query = mysqli_query($con, $cat_sql);
@@ -49,7 +51,8 @@ include 'inc/header.php';
                     </tr>      
                     <?php
                 }
-            ?>      
+            ?>  
+            </tbody>    
         </table>
     </div>
 <?php include 'inc/footer.php'; ?>

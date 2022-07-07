@@ -38,7 +38,7 @@ include 'inc/header.php';
             $password = md5($_POST['password']);
             $role = $_POST['role'];
 
-            $update_user = "UPDATE users SET fullname = '$fullname', password = '$password', role = '$role' WHERE id = $update_id";
+            $update_user = "UPDATE users SET fullname = '$fullname', password = '$password', role = $role WHERE id = $update_id";
             $update_result = mysqli_query($con, $update_user);
             if($update_user) {
                 $_SESSION['use-update'] = '<div class="alert alert-success">User Updated Successfully!</div>';

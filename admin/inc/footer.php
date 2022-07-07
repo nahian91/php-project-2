@@ -10,5 +10,15 @@
             </div>
         </div>
     </footer>
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/datatables.min.js"></script>
+    <script>
+        $(document).ready( function () {
+            $('#posttable').DataTable();
+            $('#cattable').DataTable();
+            $('#usertable').DataTable();
+        } );
+    </script>
 </body>
 </html>

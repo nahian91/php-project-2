@@ -11,21 +11,28 @@ include 'inc/header.php';
                 unset($_SESSION['post-add']);
             }
 
+            if(isset($_SESSION['post-update'])) {
+                echo $_SESSION['post-update'];
+                unset($_SESSION['post-update']);
+            }
+
             if(isset($_SESSION['post-delete'])) {
                 echo $_SESSION['post-delete'];
                 unset($_SESSION['post-delete']);
             }
         ?>
         <a href="add-post.php" class="btn btn-primary mb-3">Add New Post</a>
-        <table class="table table-border">
-            <tr>
-                <th>SL No.</th>
-                <th>Title</th>
-                <th>Image</th>
-                <th>Category</th>
-                <th>Action</th>
-            </tr>
-
+        <table class="table table-border" id="posttable">
+            <thead>
+                <tr>
+                    <th>SL No.</th>
+                    <th>Title</th>
+                    <th>Image</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
             <?php
                 $post_sql = "SELECT * FROM post
                 LEFT JOIN users ON post.author = users.id
@@ -56,7 +63,8 @@ include 'inc/header.php';
                         </tr>    
                     <?php
                 }
-            ?>        
+            ?>   
+            </tbody>     
         </table>
     </div>
 <?php include 'inc/footer.php'; ?>
